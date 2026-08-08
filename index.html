@@ -1,24 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday!</title>
-  <style>
-    body { 
-      text-align: center; 
-      background: linear-gradient(to right, #ff9a9e, #fad0c4); 
-      font-family: 'Arial', sans-serif; 
-    }
-    h1 { color: #fff; font-size: 3em; margin-top: 50px; }
-    p { color: #fff; font-size: 1.5em; }
-    .balloons { font-size: 4em; }
-  </style>
-</head>
-<body>
-  <h1>🎉 Happy Birthday, Riya!!! 🎉</h1>
-  <p>Wishing you joy, laughter, and endless happiness today and always!</p>
-  <div class="balloons">🎈🎈🎈</div>
-</body>
-</html>
+<!doctype html>
+<html lang="en" style="height: 100%; margin: 0;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Riya!</title>
+    
+    <!-- Tailwind CSS (Browser Version) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    
+    <style>
+      body {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #F4F1EE;
+        overflow-x: hidden;
+      }
+      
+      /* Celebration Animation */
+      @keyframes floatUp {
+        0% {
+          opacity: 1;
+          transform: translate(-50%, 0) scale(0.5) rotate(0deg);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(var(--end-x), var(--end-y)) scale(1.5) rotate(var(--end-rot));
+        }
+      }
+      .emoji-particle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        pointer-events: none;
+        font-size: 2rem;
+        z-index: 50;
+        animation: floatUp var(--duration) ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="selection:bg-[#1C1C1C] selection:text-white">
+    <!-- Main Container -->
+    <div class="bg-[#F4F1EE] w-full min-h-screen flex flex-col p-6 md:p-12 lg:p-16 font-sans text-[#1C1C1C] overflow-hidden border-[12px] md:border-[20px] border-white relative">
+      
+      <!-- Background Huge Text -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] sm:text-[200px] md:text-[300px] lg:text-[450px] font-bold opacity-[0.03] pointer-events-none uppercase tracking-tighter z-0">
+        RIYA
+      </div>
 
+      <!-- Header -->
+      <div class="flex justify-between items-start border-b border-[#1C1C1C]/30 pb-6 z-10 w-full max-w-6xl mx-auto pt-2">
+        <div>
+          <h2 class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">Issue No. 01</h2>
+          <p class="text-[8px] md:text-[10px] opacity-60 uppercase tracking-[0.1em] mt-1">Personal Archive // 2024</p>
+        </div>
+        <div class="text-right">
+          <h2 class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase italic">Curated Greeting</h2>
+          <p class="text-[8px] md:text-[10px] opacity-60 uppercase tracking-[0.1em] mt-1">Annual Folio Edition</p>
+        </div>
+      </div>
+
+      <!-- Center Main Content -->
+      <div class="flex-1 flex flex-col justify-center items-center z-10 w-full relative my-12">
+        <div id="main-title" class="relative transition-all duration-1000 ease-out translate-y-8 opacity-0">
+          <h1 class="text-[100px] sm:text-[130px] md:text-[160px] font-serif italic leading-none tracking-tighter mb-4 text-[#2A2A2A] pr-4 md:pr-0" style="font-family: 'Georgia', serif;">
+            Riya.
+          </h1>
+          <div class="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
+            <span class="text-[8px] md:text-[10px] font-bold tracking-[0.3em] md:tracking-[0.5em] uppercase whitespace-nowrap opacity-40">
+              August Milestone
+            </span>
+          </div>
+        </div>
+        
+        <div id="divider" class="w-full max-w-[200px] md:max-w-md h-[1px] bg-[#1C1C1C] opacity-0 my-6 md:my-8 transition-opacity duration-1000 delay-300"></div>
+        
+        <p id="subtitle" class="text-center text-xs md:text-sm tracking-[0.3em] md:tracking-[0.4em] uppercase font-medium opacity-0 transition-opacity duration-1000 delay-500">
+          Happy Birthday
+        </p>
+      </div>
+
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 items-end pt-10 border-t border-[#1C1C1C]/30 z-10 w-full max-w-6xl mx-auto">
+        <div class="col-span-1 text-center md:text-left order-2 md:order-1">
+          <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-3 opacity-80">The Message</p>
+          <p class="text-base md:text-lg leading-relaxed font-serif italic text-[#444] max-w-[280px] mx-auto md:mx-0" style="font-family: 'Georgia', serif;">
+            Wishing you a wonderful day filled with great moments and good company. Have an amazing year ahead!
+          </p>
+        </div>
+        
+        <div class="col-span-1 flex flex-col justify-end items-center pb-2 relative order-1 md:order-2">
+          <div class="relative" id="celebrate-container">
+            <button id="celebrate-btn" class="w-20 h-20 md:w-24 md:h-24 border border-[#1C1C1C] rounded-full flex flex-col items-center justify-center cursor-pointer hover:bg-[#1C1C1C] hover:text-[#F4F1EE] transition-all duration-300 z-20 group relative overflow-hidden bg-transparent text-[#1C1C1C]">
+              <span class="material-symbols-outlined mb-1 group-hover:rotate-12 transition-transform duration-300" style="font-size: 24px;">celebration</span>
+              <span class="text-[9px] md:text-[10px] font-bold tracking-widest uppercase mt-1">Celebrate</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="col-span-1 text-center md:text-right order-3 md:order-3">
+          <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-2 md:mb-3 opacity-80">Regards</p>
+          <p class="text-2xl md:text-3xl font-serif leading-none text-[#2A2A2A]" style="font-family: 'Georgia', serif;">A Friend</p>
+          <p class="text-[9px] md:text-[10px] opacity-50 mt-2 uppercase tracking-[0.2em]">Digital Correspondence</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Entrance Animations
+      window.addEventListener('DOMContentLoaded', () => {
+        requestAnimationFrame(() => {
+          const title = document.getElementById('main-title');
+          const divider = document.getElementById('divider');
+          const subtitle = document.getElementById('subtitle');
+          
+          if (title) {
+            title.style.transform = 'translateY(0)';
+            title.style.opacity = '1';
+          }
+          if (divider) divider.style.opacity = '0.2';
+          if (subtitle) subtitle.style.opacity = '0.8';
+        });
+      });
+
+      // Celebrate Button Logic
+      const btn = document.getElementById('celebrate-btn');
+      const container = document.getElementById('celebrate-container');
+      const emojis = ['🎈', '🎉', '✨', '🎂', '🥳'];
+
+      if (btn && container) {
+        btn.addEventListener('click', () => {
+          // Click feedback
+          btn.style.transform = 'scale(0.95)';
+          setTimeout(() => btn.style.transform = 'scale(1)', 150);
+
+          // Spawn particles
+          for (let i = 0; i < 8; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'emoji-particle';
+            particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            // Randomize trajectory
+            const endX = `calc(-50% + ${(Math.random() - 0.5) * 300}px)`;
+            const endY = `${-150 - Math.random() * 200}px`;
+            const endRot = `${(Math.random() - 0.5) * 120}deg`;
+            const duration = `${1.2 + Math.random()}s`;
+
+            particle.style.setProperty('--end-x', endX);
+            particle.style.setProperty('--end-y', endY);
+            particle.style.setProperty('--end-rot', endRot);
+            particle.style.setProperty('--duration', duration);
+
+            container.appendChild(particle);
+
+            // Clean up after animation
+            setTimeout(() => {
+              particle.remove();
+            }, 2500); 
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
